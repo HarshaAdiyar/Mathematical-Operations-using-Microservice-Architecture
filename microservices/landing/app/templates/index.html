@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arithmetic Microservices</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h1 class="text-center mb-4">Arithmetic Microservices</h1>
+          <form action="" method="POST" class="border p-4">
+            <div class="form-group">
+              <label for="first">Enter the First number:</label>
+              <input type="text" class="form-control" id="first" name="first">
+            </div>
+            <div class="form-group">
+              <label for="second">Enter the Second number:</label>
+              <input type="text" class="form-control" id="second" name="second">
+            </div>
+            <div class="form-group">
+              <label for="operation">Enter Operation:</label>
+              <select class="form-control" id="operation" name="operation">
+                <option value="add">Addition</option>
+                <option value="minus">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+                <option value="exponent">Exponentiation</option>
+                <option value="modulus">Modulus</option>
+                <option value="equals">Equals</option>
+              </select>
+            </div>
+            <button type="submit" style="width:13cm;" class="btn btn-primary mb-3">Submit</button>
+
+            <h4>{% for message in get_flashed_messages() %}
+               {{message}}
+            {% endfor %}</h4>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
